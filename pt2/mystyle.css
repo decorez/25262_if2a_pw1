@@ -1,0 +1,19 @@
+body{
+    background-color: white;
+}
+
+h1{
+    color: black;
+    background-color: red;
+    text-align: center;
+    font-size: 60px;
+    border: 10px;
+    border-style: solid;
+}
+.cnn{
+    color: white;
+}
+.black  
+{
+    color: black;
+}
