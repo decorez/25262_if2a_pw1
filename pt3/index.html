@@ -3,110 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pertemuan 3</title>
+    <title>Travelokay</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Heading h1 sd h6 -->
-    <h1>Selamat datang</h1>
-    <!-- Paragraf -->
-    <p>Selamat datang di IF2A</p>
-    <!-- hr -->
-    <hr>
-    <!-- Order list -->
-    <h2>Program Studi</h2>
-    <ol type="a">
-        <li>Informatika</li>
-        <li>Sistem Informasi</li>
-    </ol>
-    <!-- Unorder List -->
-    <h2>Profil Lulusan</h2>
-    <ul>
-        <li>Web Developer</li>
-        <li>Mobile Developer</li>
-    </ul>
 
-    <h2>Fakultas</h2>
-    <ol type="1">
-        <li>FIKR
-            <ul>
-                <li>IF</li>
-                <li>SI</li>
-            </ul>
-        </li>
-        <li>FEB
-            <ul>
-                <li>AK</li>
-                <li>MJ</li>
-            </ul>
-        </li>
-    </ol>
-    <!-- tabel -->
-    <table border = "1">
-        <tr>
-            <td>NPM</td>
-            <td>Nama</td>
-        </tr>
-        <tr>
-            <td>001</td>
-            <td>Jill</td>
-        </tr>
-    </table>
-    <!-- table rowspan -->
-     <h2>Rowspan</h2>
-    <table border="1">
-        <tr>
-            <td rowspan="2">NPM</td>
-            <td>Nama</td>
-        </tr>
-        <tr>
-            <td>Jill</td>
-        </tr>
-    </table>
+    <header class="header">
 
-    <!-- table colspan -->
-     <h2>Colspan</h2>
-     <table border="1">
-        <tr>
-            <td colspan="2">NPM</td>
-        </tr>
-        <tr>
-            <td>001</td>
-            <td>Jill</td>
-        </tr>
-    </table>
+    <div class="brand-text">
+            <h2>Travelokay</h2>
+            <p>make travel easy</p>
+        </div>
+    </div>
 
-    <!-- Colspan dan Rowspan -->
-    <h2>Colspan dan Rowspan</h2>
-    <table border="10">
-        <tr>
-            <td rowspan="2" style="text-align: center;font-weight: bold;">Logo</td>
-            <td rowspan="2" style="text-align: center;font-weight: bold;">Prodi</td>
-            <td colspan="2" style="text-align: center;font-weight: bold;">Jumlah</td>
-        </tr>
-        <tr>
-            <td style="text-align: center;font-weight: bold;">LK</td>
-            <td style="text-align: center;font-weight: bold;">LP</td>
-        </tr>
-        <tr>
-            <td>
-                <img src="images/logo.png" width="120px" alt="">
-            </td>
-            <td>Informatika</td>
-            <td>100</td>
-            <td>105</td>
-        </tr>
-        <tr>
-            <td>
-                <img src="images/logo.png" width="120px" alt="">
-            </td>
-            <td>Sistem <br> Informasi</td>
-            <td>150</td>
-            <td>120</td>
-        </tr>
-    </table>
-    <hr>
-    <!-- link -->
-    <a href="profil.html">Profil</a>
+    <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="#">Destinations</a>
+        <a href="#">Special Offers</a>
+        <a href="#">Contact Us</a>
+    </nav>
+
+    </header>
+
+    <section class="home">
+
+    <p class="welcome">Welcome to TravelOkay</p>
+
+    <h1>Lets Explore The World</h1>
+    <p>Experience the excitement of an unforgettable holiday with various interesting destinations ready to pamper you.</p>
+    </section>
+
+    <div class="search-box">
+
+        <div class="input-box">
+            <b>Destination</b>
+            <input type="text" placeholder="Tell us where you want to go">
+        </div>
+
+        <div class="input-box">
+            <b>Travel Dates</b>
+            <input type="text" placeholder="When will you go on tour?">
+        </div>
+
+        <div class="button-box">
+            <button>Search Tour</button>
+        </div>
+    </div>
+
+    <section class="destinations">
+    <h1>Destinations</h1>
+    <p>
+        Explore amazing places around the world and discover the beauty <br>
+        of every destination with TravelOkay.
+    </p>
+
+    <div class="destinations-grid">
+        <div class="destination-card">
+            <img src="images/europe.jpg" alt="Europe">
+            <h3>Europe</h3>
+            <p>91 Tours</p>
+        </div>
+
+        <div class="destination-card">
+            <img src="images/middleeast.jpeg" alt="Asia">
+            <h3>Turkiye & Middle East</h3>
+            <p>15 Tours</p>
+        </div>
+
+        <div class="destination-card">
+            <img src="images/china.jpeg" alt="America">
+            <h3>China, Taiwan, Hongkong</h3>
+            <p>81 Tours</p>
+        </div>
+    </div>
+    <div class="destinations-grid">
+        <div class="destination-card">
+            <img src="images/japan.jpeg" alt="Europe">
+            <h3>Asia</h3>
+            <p>100 Tours</p>
+        </div>
+
+        <div class="destination-card">
+            <img src="images/australia.jpeg" alt="Asia">
+            <h3>Australia & New Zealand</h3>
+            <p>18 Tours</p>
+        </div>
+
+        <div class="destination-card">
+            <img src="images/america.jpeg" alt="America">
+            <h3>America & Canada</h3>
+            <p>6 Tours</p>
+        </div>
+    </div>
+
+    <h1>Destination Highlight</h1>
+    <p>
+        Discover the hidden beauty of stunning destinations in our curated collection! <br>
+        Don't miss out on exploring the world's captivating wonders with us and create unforgettable moments!
+    </p>
+
+<section class="video-section">
+    <div class="text">
+        <h2>The Journey to The Beautiful Game <br>- New Zealand</h2>
+
+        <p>
+        From Hobbiton™, all the way to the base of <br>
+        Aoraki Mt Cook, follow one young girl on a <br>
+        journey through some of Aotearoa New <br>
+        Zealand’s most beautiful destinations ❤️
+        </p>
+    </div>
+
+    <div class="video">
+        <video controls>
+            <source src="video/travel.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+
+</section>
+
+</section>
 
 </body>
 </html>
