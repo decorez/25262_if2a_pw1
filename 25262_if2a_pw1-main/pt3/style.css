@@ -1,0 +1,258 @@
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* header */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 50px;
+    background:rgb(0, 0, 0);
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* brand (nama travel) */
+.brand{
+    display:flex;
+    align-items:center;
+}
+
+/* text */
+.brand-text h2{
+    margin:0;
+    color:#ffffff;
+}
+
+.brand-text p{
+    margin:0;
+    font-size:12px;
+    text-align:right;
+    color:#cbfbff;
+}
+
+/* home page*/
+.home{
+    text-align:center;
+    margin-top:80px;
+}
+
+.welcome{
+    font-size:20px;
+    color:#555;
+}
+
+.home h1{
+    font-size:48px;
+    margin:10px 0;
+}
+
+/* SEARCH BOX */
+.search-box{
+    width:80%;
+    margin:40px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    display:flex;
+    gap:15px;
+}
+
+.input-box{
+    flex:2;
+}
+
+.input-box input{
+    width:100%;
+}
+
+.button-box{
+    flex:1;
+}
+
+.button-box button{
+    width:100%;
+    height:50px;
+}
+
+/* menu*/
+.menu a{
+    text-decoration:none;
+    margin-left:25px;
+    color:#ffffff;
+    font-weight:500;
+}
+
+.menu a:hover{
+    color:#ff4d3d;
+}
+
+/* search box */
+.search-box{
+    width:90%;
+    margin:40px auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.input-box{
+    flex:2;
+    border:1px solid #ddd;
+    padding:10px;
+    border-radius:5px;
+}
+
+.input-box input{
+    width:100%;
+    border:none;
+    outline:none;
+    margin-top:5px;
+}
+
+.button-box{
+    flex:1;
+}
+
+.button-box button{
+    width:100%;
+    height:60px;
+    background:#ff4d3d;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.button-box button:hover{
+    background:#e63c2c;
+}
+
+/* destinations*/
+
+.destinations {
+    text-align: center;
+    padding: 50px;
+}
+
+.destinations h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.destinations p {
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.destination-card h3 {
+    margin: 10px 0 5px;
+}
+
+.destination-card p {
+    color: gray;
+    margin-bottom: 15px;
+}
+/* grid */
+
+.destination-list{
+    width:90%;
+    margin:40px auto;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+/* card */
+
+.card{
+    width:22%;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    padding-bottom:15px;
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    border-radius:10px 10px 0 0;
+}
+
+.card h3{
+    margin:10px 0 5px 0;
+}
+
+.card p{
+    margin:0;
+    color:#888;
+}
+
+/* video */
+.video-section{
+    width: 80%;
+    margin: 60px auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.text{
+    flex: 1;
+}
+
+.text h2{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.video{
+    flex: 1;
+}
+
+.video video{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.checklist{
+    list-style: none;
+    padding-left: 0;
+}
+
+.checklist li{
+    margin-bottom: 10px;   /* memberi jarak antar teks */
+    font-size: 16px;
+}
+
+.checklist li::before{
+    content: "✓ ";
+    color: green;
+    font-weight: bold;
+    margin-right: 8px;
+}
