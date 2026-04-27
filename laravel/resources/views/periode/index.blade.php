@@ -1,5 +1,4 @@
 @foreach ($result as $item)
-   Tahun akademik:  {{ $item -> tahun_akademik }}<br>
-   Semester: {{ $item->semester }}<br>  
+   {{ $item -> tahun_akademik }} - {{ $item->semester }}<br>  
 
 @endforeach
