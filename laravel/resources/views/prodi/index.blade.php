@@ -3,9 +3,11 @@
 @section('title', 'Program Studi')
 
 @section('content')
-    <h1>Prodi</h1>
+    <a href="{{route('prodi.create')}}" class="btn btn-primary">Tambah</a>
+    <a href="   " class="btn btn-danger">Hapus</a>
+    <a href="   " class="btn btn-warning">Perbarui</a>
 
-    <table class="table table-bordered" border="1" cellpadding="10">
+    <table class="table table-bordered mt-2" border="1" cellpadding="10">
     <tr>
         <th>No</th>
         <th>Nama Prodi</th>

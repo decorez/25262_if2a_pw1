@@ -344,6 +344,12 @@
                 </ul>
               </li>
               <li class="nav-item">
+                <a href="{{ route('periode.index') }}" class="nav-link">
+                  <i class="nav-icon bi bi-calendar"></i>
+                  <p>Periode</p>
+                </a>
+              </li>
+              <li class="nav-item">
                 <a href="{{ route('fakultas.index') }}" class="nav-link">
                   <i class="nav-icon bi bi-building"></i>
                   <p>Fakultas</p>
