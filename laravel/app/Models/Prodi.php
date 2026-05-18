@@ -11,7 +11,7 @@ class Prodi extends Model
         'nama_prodi',
         'singkatan',
         'kaprodi',
-        'fakultas-id'
+        'fakultas_id'
     ];
 
     public function fakultas()

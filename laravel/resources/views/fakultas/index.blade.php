@@ -4,14 +4,12 @@
 
 @section('content')
     <a href="{{route('fakultas.create')}}" class="btn btn-primary">Tambah</a>
-    <a href="   " class="btn btn-danger">Hapus</a>
-    <a href="   " class="btn btn-warning">Perbarui</a>
-
     <table class="table table-bordered mt-2">
         <thead>
             <tr>
                 <th>Nama</th>
                 <th>Singkatan</th>
+                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -19,6 +17,15 @@
                 <tr>
                     <td>{{ $item -> nama_fakultas }}</td>
                     <td>{{ $item -> singkatan }}</td>
+                    <td>
+                        <form method="POST" action="{{ route('fakultas.destroy', $item->id) }}">
+                        @csrf
+                        <input name="_method" type="hidden" value="DELETE">
+                        <button type="submit" class="btn btn-xs btn-danger btn-rounded show_confirm"
+                            data-toggle="tooltip" title='Delete'
+                            data-nama='{{ $item->nama_fakultas }}'>Hapus</button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

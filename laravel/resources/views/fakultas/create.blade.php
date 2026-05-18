@@ -18,7 +18,7 @@
 
         <div class="form-group">
             <label for="">Singkatan</label>
-        <input type="text" name="singkatan" class="form-control value="{{ old('nama_fakultas')}}">
+        <input type="text" name="singkatan" class="form-control value="{{ old('singkatan')}}">
         </div>
         @error('singkatan')
             <div class="text-danger">
