@@ -4,8 +4,6 @@
 
 @section('content')
     <a href="{{route('prodi.create')}}" class="btn btn-primary">Tambah</a>
-    <a href="   " class="btn btn-danger">Hapus</a>
-    <a href="   " class="btn btn-warning">Perbarui</a>
 
     <table class="table table-bordered mt-2" border="1" cellpadding="10">
     <tr>
@@ -15,6 +13,7 @@
         <th>Kaprodi</th>
         <th>Fakultas</th>
         <th>Singkatan</th>
+        <th>Aksi</th>
     </tr>
 
     @foreach($prodis as $key => $prodi)
@@ -25,6 +24,22 @@
         <td>{{ $prodi->kaprodi }}</td>
         <td>{{ $prodi->fakultas->nama_fakultas ?? '-' }}</td>
         <td>{{ $prodi->fakultas->singkatan}}</td>
+        <td class="d-flex gap-2">
+            <form method="POST" action="{{ route('prodi.destroy', $prodi->id) }}">
+                @csrf
+                <input name="_method" type="hidden" value="DELETE">
+                <button type="submit" class="btn btn-danger btn-sm">
+                    Hapus
+                </button>
+            </form>
+
+            <form method="GET" action="{{ route('prodi.edit', $prodi->id) }}">
+                @csrf
+                <button type="submit" class="btn btn-warning btn-sm">
+                    Ubah
+                </button>
+            </form>
+        </td>
     </tr>
     @endforeach
 

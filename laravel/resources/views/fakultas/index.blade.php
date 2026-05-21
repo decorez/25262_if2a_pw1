@@ -17,15 +17,23 @@
                 <tr>
                     <td>{{ $item -> nama_fakultas }}</td>
                     <td>{{ $item -> singkatan }}</td>
-                    <td>
+                    <td class="d-flex gap-2">
                         <form method="POST" action="{{ route('fakultas.destroy', $item->id) }}">
-                        @csrf
-                        <input name="_method" type="hidden" value="DELETE">
-                        <button type="submit" class="btn btn-xs btn-danger btn-rounded show_confirm"
-                            data-toggle="tooltip" title='Delete'
-                            data-nama='{{ $item->nama_fakultas }}'>Hapus</button>
+                            @csrf
+                            <input name="_method" type="hidden" value="DELETE">
+                            <button type="submit" class="btn btn-danger btn-sm">
+                                Hapus
+                            </button>
+                        </form>
+
+                        <form method="GET" action="{{ route('fakultas.edit', $item->id) }}">
+                            @csrf
+                            <button type="submit" class="btn btn-warning btn-sm">
+                                Ubah
+                            </button>
                         </form>
                     </td>
+                    
                 </tr>
             @endforeach
         </tbody>

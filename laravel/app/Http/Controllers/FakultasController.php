@@ -58,7 +58,7 @@ class FakultasController extends Controller
      */
     public function edit(Fakultas $fakultas)
     {
-        //
+        return view('fakultas.edit', compact('fakultas'));
     }
 
     /**
@@ -66,7 +66,14 @@ class FakultasController extends Controller
      */
     public function update(Request $request, Fakultas $fakultas)
     {
-        //
+        $input = $request->validate([
+            'nama_fakultas' => 'required|unique:fakultas,nama_fakultas,' . $fakultas->id,
+            'singkatan'  => 'required'
+        ]);
+
+        $fakultas->update($input);
+
+        return redirect() -> route('fakultas.index');
     }
 
     /**
