@@ -20,7 +20,7 @@
 
         <div class="form-group">
             <label for="">Semester</label>
-        <input type="text" name="semester" class="form-control value="{{ old('semester')}}">
+        <input type="text" name="semester" class="form-control value="{{ old('semester') ?? $periode->semester }}">
         </div>
         @error('semester')
             <div class="text-danger">
