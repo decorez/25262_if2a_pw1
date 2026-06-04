@@ -234,7 +234,9 @@
                   class="user-image rounded-circle shadow"
                   alt="User Image"
                 />
-                <span class="d-none d-md-inline">Alexander Pierce</span>
+                <span class="d-none d-md-inline">
+                  {{ auth()->user()->name }}
+                </span>
               </a>
               <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                 <!--begin::User Image-->
@@ -245,8 +247,8 @@
                     alt="User Image"
                   />
                   <p>
-                    Alexander Pierce - Web Developer
-                    <small>Member since Nov. 2023</small>
+                    {{ auth()->user()->name }} - Web Developer
+                    <small>Member since Apr. 2026</small>
                   </p>
                 </li>
                 <!--end::User Image-->
@@ -270,7 +272,12 @@
                 <!--begin::Menu Footer-->
                 <li class="user-footer">
                   <a href="#" class="btn btn-outline-secondary">Profile</a>
-                  <a href="#" class="btn btn-outline-danger float-end">Sign out</a>
+                  <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                      @csrf
+                      <button type="submit" class="btn btn-outline-danger float-end">
+                          Sign out
+                      </button>
+                  </form>
                 </li>
                 <!--end::Menu Footer-->
               </ul>
@@ -315,33 +322,10 @@
               id="navigation"
             >
               <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-speedometer"></i>
-                  <p>
-                    Dashboard
-                    <i class="nav-arrow bi bi-chevron-right"></i>
-                  </p>
+                <a href="{{ route('dashboard') }}" class="nav-link">
+                  <i class="nav-icon bi bi-speedometer2"></i>
+                  <p>Dashboard</p>
                 </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="../index.html" class="nav-link">
-                      <i class="nav-icon bi bi-circle"></i>
-                      <p>Dashboard v1</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../index2.html" class="nav-link">
-                      <i class="nav-icon bi bi-circle"></i>
-                      <p>Dashboard v2</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../index3.html" class="nav-link">
-                      <i class="nav-icon bi bi-circle"></i>
-                      <p>Dashboard v3</p>
-                    </a>
-                  </li>
-                </ul>
               </li>
               <li class="nav-item">
                 <a href="{{ route('periode.index') }}" class="nav-link">
